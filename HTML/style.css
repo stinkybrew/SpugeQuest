@@ -1,0 +1,167 @@
+html { height: 100%;}
+
+*
+{ 
+  margin: 0;
+  padding: 0;
+}
+
+body
+{ 
+  font: normal .80em;
+  font-family: 'Baloo', cursive;
+  background: #1C1F33;
+  color: #FFF;
+}
+
+p
+{ 
+  padding: 0px 40px 20px 40px;
+  color: #1C1F33;
+}
+
+h1, h2, h3, h4, h5, h6 
+{ 
+  font: normal 200%;
+  font-family: 'Wendy One', sans-serif;
+  color: #FFF;
+  margin: 0 0 15px 0;
+  padding: 15px 0 5px 0;
+}
+
+h2
+{ 
+  font: normal 200%;
+  font-family: 'Wendy One', sans-serif;
+}
+
+h4, h5, h6
+{ 
+  margin: 0;
+  padding: 0 0 5px 0;
+  font: normal 125%;
+  font-family: 'Wendy One', sans-serif;
+}
+
+a, a:hover
+{ 
+  outline: none;
+  text-decoration: underline;
+  color: #FFFFFF;
+  font-family: 'Wendy One', sans-serif;
+}
+
+a:hover
+{ 
+  text-decoration: none;
+}
+
+#main, #title, #menubar, #site_content
+{ 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+#header
+{ 
+  background: transparent;
+  height: 200px;
+}
+
+#title
+{ 
+  width: 460px;
+  position: relative;
+  height: 200px;
+}
+
+#title #title_text 
+{ 
+  position: absolute; 
+  text-align: center;
+  top: 20px;
+}
+
+#title h1
+{ 
+  margin: 0;
+}
+
+#title_text h1
+{
+  padding: 35px 0 0 0;
+  color: #FFF;
+  font-size: 500%;
+  text-decoration: none;
+}
+
+#title_text h2
+{ 
+  font-size: 120%;
+  padding: 4px 0 0 0;
+  color: #B9D6F2;
+}
+
+#menubar
+{ 
+  width: 600px;
+  height: 52px;
+  padding-left:0;
+  background: #FE5E41;
+} 
+
+ul#menu, ul#menu li
+{ 
+  float: left;
+  margin: 0; 
+  padding: 0;
+}
+
+ul#menu li { list-style: none;}
+
+ul#menu li a
+{ 
+  font: normal 100% arial, sans-serif;
+  display: block;
+  float: left;
+  height: 17px;
+  margin: 10px 0 0 10px;
+  padding: 9px 25px 6px 25px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+} 
+
+ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
+{ 
+  color: #1C1F33;
+  background: #FFF;
+}
+
+#site_content
+{ 
+  width: 600px;
+  background:#FFE1A8;
+  overflow: hidden;
+  padding: 0 0px 20px 0px;
+  text-align: center;
+  margin-top: 60px;
+  height: 800px;
+} 
+
+#site_content h1
+{
+  color: #FE5E41;
+}
+
+#site_content ul
+{
+  font-family: 'Baloo', cursive;
+  color: #1C1F33;
+  list-style-type: square;
+  list-style-position: outside;
+  text-align: left;
+  padding:0 40px 0 55px;
+}
+

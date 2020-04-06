@@ -1,0 +1,66 @@
+CREATE DATABASE IF NOT EXISTS `spugequest` 
+USE `spugequest`;
+
+
+CREATE TABLE square_type
+(
+  ID_square_type INT NOT NULL,
+  square_number INT NOT NULL,
+  PRIMARY KEY (ID_square_type)
+);
+
+CREATE TABLE item_type
+(
+  ID_type INT NOT NULL,
+  name VARCHAR(64) NOT NULL,
+  warmth_influence INT NOT NULL,
+  alcohol_influence INT NOT NULL,
+  money_influence INT NOT NULL,
+  PRIMARY KEY (ID_type)
+);
+
+CREATE TABLE map_square
+(
+  ID_map INT NOT NULL,
+  ID_square_type INT NOT NULL,
+  PRIMARY KEY (ID_map),
+  FOREIGN KEY (ID_square_type) REFERENCES square_type (ID_square_type)
+);
+
+
+CREATE TABLE item
+(
+  ID INT NOT NULL,
+  ID_type INT NOT NULL,
+  ID_map INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (ID_type) REFERENCES item_type(ID_type),
+  FOREIGN KEY (ID_map) REFERENCES map_square(ID_map)
+);
+
+CREATE TABLE npc
+(
+  ID INT NOT NULL,
+  ID_map INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (ID_map) REFERENCES map_square(ID_map)
+  FOREIGN KEY (ID_npc_type) REFERENCES npc_type(ID_npc_type)
+);
+
+CREATE TABLE npc_type
+(
+  name VARCHAR(64) NOT NULL,
+  alcohol_influence INT NOT NULL,
+  warmth_influence INT NOT NULL,
+  ID_npc_type INT NOT NULL,
+  ID INT NOT NULL,
+  PRIMARY KEY (ID_npc_type),
+);
+
+CREATE TABLE charracter
+(
+  ID INT NOT NULL,
+  ID_map INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (ID_map) REFERENCES map_square(ID_map)
+);
